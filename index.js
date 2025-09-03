@@ -20,6 +20,8 @@ app.use(express.json());
 app.post("/hubspot/webhook", (req, res) => {
     const events = req.body;
 
+  console.log(events);
+
     // 🔹 Log to Azure Application Insights
     telemetryClient.trackTrace({
         message: "Webhook received",

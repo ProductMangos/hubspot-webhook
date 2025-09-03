@@ -1,6 +1,8 @@
 import express from "express";
 
 const app = express();
+const port = process.env.PORT || 8080;
+
 app.use(express.json());
 
 app.post("/hubspot/webhook", (req, res) => {
@@ -14,6 +16,6 @@ app.post("/hubspot/webhook", (req, res) => {
     res.json({events: events});
 });
 
-app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port} `);
 });

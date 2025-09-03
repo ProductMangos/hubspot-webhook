@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ProductMangos/hubspot-webhook#readme",
   "dependencies": {
+    "applicationinsights": "^3.9.0",
     "express": "^5.1.0"
   }
 }
